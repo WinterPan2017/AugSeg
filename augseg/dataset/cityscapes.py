@@ -17,7 +17,7 @@ from .base import BaseDataset
 
 # https://pytorch.org/docs/stable/notes/randomness.html
 def seed_worker(worker_id):
-    cur_seed = np.random.get_state()[1][0]
+    cur_seed = int(np.random.get_state()[1][0])
     cur_seed += worker_id
     np.random.seed(cur_seed)
     random.seed(cur_seed)

@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as stats
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance
 import random
-import collections
+import collections.abc as collections
 import cv2
 import torch
 from torchvision import transforms
