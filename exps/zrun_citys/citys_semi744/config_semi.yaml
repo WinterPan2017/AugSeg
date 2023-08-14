@@ -4,7 +4,7 @@
 dataset: # Required.
   type: cityscapes_semi
   train:
-    data_root: ./data/cityscapes
+    data_root: /data/pwt/cityscapes
     data_list: ./data/splitsall/cityscapes/744/labeled.txt
     batch_size: 4
     flip: True
@@ -12,17 +12,17 @@ dataset: # Required.
     resize_base_size: [1024, 2048]
     crop:
       type: rand
-      size: [800, 800]
+      size: [769, 769]
     #---- 1) strong data augs ----#
     strong_aug:
       num_augs: 3
       flag_use_random_num_sampling: True
   val:
-    data_root: ./data/cityscapes
+    data_root: /data/pwt/cityscapes
     data_list: ./data/splitsall/cityscapes/val.txt
     batch_size: 4
     crop:
-      size: [800, 800]
+      size: [769, 769]
   n_sup: 744
   workers: 4
   mean: [0.485, 0.456, 0.406]
